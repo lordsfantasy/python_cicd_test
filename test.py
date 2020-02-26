@@ -2,8 +2,11 @@
 
 
 def hello_world(args):
-    print(eval('args'))
-    return True
+    try:
+        print(eval('args'))
+        return True
+    except:
+        pass
 
 
 hello_world("test")
