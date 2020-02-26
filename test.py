@@ -1,5 +1,4 @@
-def hello_world(arg):
-    print(eval('arg'))
+def hello_world(args):
+    print(eval('args'))
     return True
 hello_world('test')
-
