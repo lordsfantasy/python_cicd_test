@@ -4,17 +4,8 @@ pipeline {
     stage('on git commit run scan') {
       steps {
         git(url: 'https://github.com/lordsfantasy/python_cicd_test.git', branch: 'master', changelog: true)
-        sh '''task_id=$(curl --location --request POST \'http://demo.strobes.co:8006/v1/sast_scan/bandit/config/193/start/4ada15c3-d49c-44bc-96e5-ba3ba4d0580f/\' \\
---header \'Authorization: token 3bb0d1f4b975eaf6c9184e82639eb5747105fe24\' \\
---header \'Content-Type: application/json\' \\
---data-raw \'{
-    "branch": "master"
-}\' | jq -r \'.data.data.task_id\')  
-
-echo \'$task_id\'
-sleep 15s
-
-'''
+        sh '''curl --location --request POST \'http://demo.strobes.co:8006/v1/sast_scan/bandit/config/202/start/32d10e4c-9f49-484d-8db3-03c94873ab15/\' \\
+--header \'Authorization: token 9d1d5deed3703dccfdcdaaabbc0b8f0342be0e3f\''''
       }
     }
 
