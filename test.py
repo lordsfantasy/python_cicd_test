@@ -1,7 +1,5 @@
 def hello_world(args):
-    try:
-        print(('args'))
-        return True
-    except Exception as e:
-        pass
+    print(eval('args'))
+    return True
+
 hello_world('test')
