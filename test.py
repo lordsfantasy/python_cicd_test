@@ -1,5 +1,5 @@
 def hello_world(args):
-    print(eval('insecure_code'))
+    print(eval('asrvg'))
      return True
 
 hello_world('test')
