@@ -1,7 +1,7 @@
 import os
 import ast
 
-print(eval("1+1"))
+print(ast.literal_eval("1+1"))
 print(ast.literal_eval("os.getcwd()"))
 print(ast.literal_eval("os.chmod('%s', 0777)" % 'test.txt'))
 
